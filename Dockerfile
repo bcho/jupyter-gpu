@@ -3,8 +3,7 @@ FROM jupyter/datascience-notebook:7f1482f5a136
 
 # GPU powered ML
 # ----------------------------------------
-RUN conda install --yes --quiet \
-    -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/ \
+RUN conda install --yes --quiet -c conda-forge \
     tensorflow-gpu \
     cudatoolkit=9.0 && \
     conda clean -tipsy && \
